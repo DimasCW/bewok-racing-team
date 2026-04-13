@@ -548,6 +548,18 @@
         /* --- RESPONSIVE --- */
         /* --- RESPONSIVE & MOBILE NAV --- */
         @media (max-width: 968px) {
+            :root {
+                --section-padding: 6rem 0;
+            }
+
+            section, header {
+                padding: var(--section-padding) !important;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -555,13 +567,13 @@
                 width: 100%;
                 height: 100vh;
                 background: rgba(5, 5, 5, 0.98);
-                backdrop-filter: blur(15px);
+                backdrop-filter: blur(20px);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 3rem;
-                transition: var(--transition);
+                gap: 2.5rem;
+                transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
                 z-index: 1050;
             }
 
@@ -574,15 +586,75 @@
             }
 
             .mobile-toggle { display: block; }
-            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-            #hero h1 { font-size: 3.5rem; }
+            
+            #hero { padding: 0 !important; }
+            #hero h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); margin-bottom: 1rem; }
+            #hero p { font-size: 1rem; margin-bottom: 2rem; }
+            
+            .about-grid { 
+                grid-template-columns: 1fr; 
+                gap: 3rem; 
+                text-align: center;
+            }
+
+            .about-image {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+
+            .about-image img {
+                box-shadow: 10px 10px 0 var(--primary);
+            }
+
+            .market-labels {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            #cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-btn-xl {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .advantages-grid {
+                gap: 2rem;
+            }
         }
 
-        @media (max-width: 576px) {
-            #hero h1 { font-size: 3rem; }
-            .section-header h2 { font-size: 2rem; }
-            #cta-section h2 { font-size: 2rem; }
-            .container { padding: 0 1.5rem; }
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .market-tag {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
