@@ -6,6 +6,10 @@
     <title>Bewok Racing Team | Spesialis Otomotif Premium</title>
     <meta name="description" content="Bewok Racing Team - Spesialis Cutting Sticker, Wrapping, Body Repair & AC Mobil. Layanan otomotif profesional dengan hasil premium.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,13 +163,14 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        nav.scrolled .logo img {
+            height: 50px;
         }
 
         .logo span {
@@ -582,7 +587,11 @@
             }
 
             .nav-link {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+            }
+
+            .logo img {
+                height: 70px;
             }
 
             .mobile-toggle { display: block; }
@@ -663,7 +672,9 @@
     <!-- NAVBAR -->
     <nav id="navbar">
         <div class="container">
-            <a href="#" class="logo">BEWOK <span>RACING</span></a>
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Bewok Racing Team Logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="#hero" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">Tentang</a></li>
@@ -881,7 +892,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="logo">BEWOK <span>RACING</span></a>
+                    <a href="#" class="logo">
+                        <img src="assets/logo.png" alt="Bewok Racing Team Logo" style="height: 80px;">
+                    </a>
                     <p style="margin-top: 1rem;">Bengkel spesialis otomotif premium yang mengedepankan kualitas dan keindahan kendaraan Anda.</p>
                 </div>
                 <div class="footer-col">
